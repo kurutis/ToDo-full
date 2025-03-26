@@ -1,0 +1,32 @@
+.text {
+    min-width: 500px;
+    max-width: 500px;
+    height: 200px;
+    background-color: none;
+    width: 100%;
+    padding: 8px 0 8px 16px;
+    border: none;
+    border: 1px solid #6c63ff;
+    border-radius: 5px;
+    color: #242424;
+    background-color:  rgba(247, 247, 247, 1);
+}
+
+
+.text:focus{
+    outline: 2px solid #6c63ff;
+}
+ 
+
+.create {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #6c63ff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s;
+}
+.create:hover {
+	background-color: #4a44b0;
+}

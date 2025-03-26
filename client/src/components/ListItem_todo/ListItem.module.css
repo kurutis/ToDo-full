@@ -1,0 +1,104 @@
+.li {
+    width: 525px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+}
+
+.li:not(:first-child){
+    border-top: 1px solid #6C63FF;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.cl {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    color: gray;
+}
+
+.cl1 {
+    composes: cl;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.label {
+    position: relative;
+    cursor: pointer;
+}
+
+.label:before {
+    -webkit-appearance: none;
+    content: '';
+    margin-right: 5px;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid #6C63FF;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.input:checked + .label:before {
+    background-color: #6C63FF;
+}
+
+.input:checked + .label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 7px;
+    height: 14px;
+    background-color: #6C63FF;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btn {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.edit {
+    composes: btn;
+}
+
+.trash {
+    composes: btn;
+}
+
+.edit:hover svg path{
+    stroke: green;
+}
+
+.trash:hover svg path{
+    stroke: red;
+}
